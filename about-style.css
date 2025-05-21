@@ -237,7 +237,7 @@ img{
 
 .process-card{
 	box-shadow: 0 0px 14px 0 #0000002b;
-	padding: 1rem;
+	padding: 1rem 32px;
 	transition: .165s ease;
 	width: 95%;
 }

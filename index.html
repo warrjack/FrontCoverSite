@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="common.css">
 
 	<title>Front Cover Development</title>
-
+	<script defer type="text/javascript" src="mail.js"></script>
 	<script defer type="text/javascript" src="script.js"></script>
 	<script defer type="text/javascript" src="nav.js"></script>
 </head>
@@ -45,9 +45,8 @@
 				<div class="center-container" id="mobile-splash-image-container">
 					<img id="mobile-splash-image" src="img/splash.png" class="intro-animation">
 				</div>
-				<!--img src="splash-background.jpg" id="splash-background"-->
 				<h1 class="intro-animation intro-one">Let's make a <span class="text-highlight-gradient">website</span> that works for your business.</h1>
-				<p class="intro-animation intro-two">Creating iconic and seamless websites that clearly represent your message, engages your audience, and amplifies your results.</p>
+				<p class="intro-animation intro-two">Creating website solutions for businesses, influencers, and logistics to help engage audiences while amplifying results.</p>
 				<div id="cta" class="intro-animation intro-three">
 					<button id="get-started" class="secondary-button" onclick="location.href='portfolio.html'">See Our Work</button>
 					<button id="pricing" class="primary-button" onclick="location.href='#contact'">Send a Message</button>
@@ -63,11 +62,10 @@
 			<div class="left-container hidden">
 
 				<h1>We build and manage websites so owners can grow their business.</h1>
-				<!--<p>At CompanyName, we understand that websites are where most potential customers find businesses and create their first impressions. With the user experience being our top priority, we believe that we can design websites that fit best with your brand.</p>-->
 
-				<p><span class="bold-p-text">Designing</span> and <span class="bold-p-text">Coding</span> from the ground up enables us to have full flexibilty to suit your needs best. We offer advanced functionality and features such as <span class="bold-p-text">User Accounts and Membership</span> options to keep your customers engaged and offer exclusive services to your clients. We also provide in-depth <span class="bold-p-text">Analytics</span> to give you insight into what products and designs are creating the most traction for your business.</p>
+				<p>We want to make websites more accessible than ever before. Whether you’re an <span class="bold-p-text">Influencer</span> creating your personal brand or a <span class="bold-p-text">Business</span> optimizing internal operations. We take care of all the technical aspects from design and development, to continuous updates and support so you can concentrate on engagement, growth, and success.</p>
 
-				<!--<p>Whether its a simple website for your content or full of abstract animations and outside-the-box composition, we ensure that your site is refreshing and fully optimized to be fast and reliable on any device.-->
+				<p><span class="bold-p-text">Designing</span> and <span class="bold-p-text">Coding</span> our projects in-house allows us to adapt to what matters to you most. From user account creation, to blog writing, to AI assistance, we are confident in creating a product that fits your needs best. With our consistent support and website analytics, we enure that our websites are reaching more clients, creating better exposure and opportunites, and driving sales.</p>
 				</p>
 				<div id="what-we-do-button-container">
 					<button class="secondary-button" id="about-more-button" onclick="location.href='about.html'">See More About Us</button>
@@ -153,7 +151,7 @@
 		<p id="products-subtitle">Each plan's features are interchangable to suit your needs best</p>
 		<div id="products-grid">
 			<div id="basic-product" class="product-card hidden">
-				<img src="img/Portfolio_FrontCover">
+				<img src="img/Independent_FrontCover.jpg" class="product-card-image">
 				<h1 class="product-card-title">Basic</h1>
 				<p class="product-card-subtitle">Best for Individuals</p>
 				<ul>
@@ -170,7 +168,7 @@
 				</div>				
 			</div>
 			<div id="basic-product" class="product-card hidden">
-				<img src="https://www.hubspot.com/hs-fs/hubfs/emailmarketing2_1-Nov-20-2024-06-32-20-2099-PM.webp?width=650&height=428&name=emailmarketing2_1-Nov-20-2024-06-32-20-2099-PM.webp" class="product-card-image">
+				<img src="img/Business_FrontCover.jpg" class="product-card-image">
 				<h1 class="product-card-title">Standard</h1>
 				<p class="product-card-subtitle">Best for Businesses</p>
 				<ul>
@@ -187,7 +185,7 @@
 				</div>				
 			</div>
 			<div id="basic-product" class="product-card hidden">
-				<img src="https://topflightapps.com/wp-content/uploads/2020/08/example-of-a-custom-build-dashboard-.png" class="product-card-image">
+				<img src="img/MapDisplay_FrontCover.jpg" class="product-card-image">
 				<h1 class="product-card-title">Premium</h1>
 				<p class="product-card-subtitle">Best for Web Apps</p>
 				<ul>
@@ -216,22 +214,23 @@
 			<div class="left-container center-container">
 				<img src="img/email.jpg">
 			</div>
-			<div class="right-container" id="mail-right-container">
-				<div id="enter-form">
+			<div class="right-container" id="mail-right-container" action="https://formspree.io/f/xdkgjpvd" method="POST">
+				<form id="enter-form">
+					<input type="hidden" name="message" id="full-message">
 					<div class="inline-form-container">
-						<p>Full Name</p>
-						<input type="text" placeholder="John Doe">
+						<p class="card-text">Full Name</p>
+						<input id="full-name" type="text" placeholder="John Doe">
 					</div>
 					<div class="inline-form-container">
-						<p>Company Name (Optional)</p>
-						<input type="text" placeholder="Company Inc">
+						<p class="card-text">Company Name (Optional)</p>
+						<input id="company-name" type="text" placeholder="Company Inc">
 					</div>
 					<div class="inline-form-container">
-						<p>Email</p>
-						<input type="text" placeholder="example@domain.com">
+						<p class="card-text">Email</p>
+						<input id="email" name="email" type="email" placeholder="example@domain.com">
 					</div>
 					<div class="inline-form-container">
-						<p>Subject</p>
+						<p class="card-text">Subject</p>
 						<div id="dropdown">
 							<button onclick="dropdownFunction()" id="dropdown-button" class="dropdown-button">
 							    Outreach
@@ -250,20 +249,23 @@
 						</div>
 					</div>
 					<div class="inline-form-container">
-						<p>Message</p>
-						<textarea class="message-box" type="text" placeholder="Hi, I'm John. I have an idea for a website..."></textarea>
+						<p class="card-text">Message</p>
+						<textarea id="user-message" class="message-box" type="text" placeholder="Hi, I'm John. I have an idea for a website..."></textarea>
+					</div>
+					<div class="inline-form-container" id="error-message-container">
+						<p id="error-message">There is no error</p>
 					</div>
 					<div class="inline-form-container">
-						<p id="submit-button-alignment"> </p>
+						<p class="card-text" id="submit-button-alignment"> </p>
 						<div class="center-container">
-							<button id="submit-button" onclick="submitHandler()">Submit</button>
+							<button id="submit-button" type="submit" onclick="return submitHandler()">Submit</button>
 						</div>
 					</div>
-				</div>
+				</form>
 				<div id="mail-success">
-					<img src="check-512.webp">
+					<img src="img/check.webp">
 					<h2>Successfully Sent!</h2>
-					<p>You will hear from us very soon!</p>
+					<p class="card-text">You will hear from us very soon!</p>
 				</div>
 			</div>
 		</div>

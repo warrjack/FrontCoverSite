@@ -562,12 +562,16 @@
 	flex-direction: column;
 }
 
-#card-form p{
+.card-text{
 	font-size: 1rem;
 	padding: 0;
-	margin: .5rem 0 0 0 ;
+	margin: .5rem 0 0 0;
 	width: 200px;
 	color: var(--font-colour);
+}
+
+#error-message-alignment{
+	margin: 0 0 .5rem 0;
 }
 
 .inline-form-container{
@@ -676,8 +680,6 @@
 	line-height: 18px;
 }
 
-/*https://land-book.com/websites/74456-free-ai-video-generator-create-ai-videos-in-140-languages*/
-
 /* Hidden Animation */
 .hidden{
 	opacity: 0;
@@ -700,6 +702,28 @@
 }
 .why-choose-us-card:nth-child(4){
 	transition-delay: .6s;
+}
+
+#error-message-container{
+ 	width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#error-message{
+	display: block;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+  background-color: #FFDDDD;
+  color: #F90000;
+  border-radius: 8px;
+  margin: 0 8px 0 0;
+  padding: 4px 8px;
+  width: 70%;
 }
 
 /* Media Query */
@@ -888,7 +912,7 @@
 		width: 92%;
 	}
 
-	#contact .right-container p{
+	#contact .card-text{
 		font-size: 14px;
 		padding: 0;
 		margin: 1rem 0 0 0;
@@ -896,6 +920,9 @@
 	}
 	#contact .right-container input{
 		margin-bottom: 0;
+	}
+	#error-message{
+		margin: 0 12px 0 0;
 	}
 }
 @media(max-width: 875px){
@@ -979,6 +1006,9 @@
 	.product-card button{
 		padding: 18px;
 		font-size: 14px;
+	}
+	#error-message{
+		margin: 0;
 	}
 }
 @media(max-width: 495px){
@@ -1125,7 +1155,7 @@
 	#card-form .left-container img{
 		width: 172px;
 	}
-	#card-form .right-container p{
+	#card-form .card-text{
 		width: 90%;
 		margin-left: 8px;
 	}
@@ -1137,6 +1167,10 @@
 	}
 	#card-form .right-container .inline-form-container{
 		flex-direction: column;
+	}
+
+	#error-message{
+		width: 100%;
 	}
 	#submit-button-alignment{
 		display: none;
