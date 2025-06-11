@@ -55,12 +55,10 @@
 html, body{
 	margin: 0;
 	padding: 0;
-	overflow-x: 0;
 }
 
 body{
 	background: white;
-	overflow-x: hidden;
 }
 /* Nav Bar */
 
