@@ -75,7 +75,7 @@ nav {
   align-items: center;
   background-color: var(--nav-color);
   padding: 0 6rem;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -231,10 +231,10 @@ nav ul li a:hover{
 	/* Hidden Menu */
 	#mobile-menu{
 		background: #23263F;
-		height: 100vh; /*auto;*/
-		width: 100vw;
+		height: 100%; /*auto;*/
+		width: 100%;
 		position: fixed;
-		top: -105vh;
+		top: -115vh;
 		right: 0;
 		display: flex;
 		flex-direction: column;

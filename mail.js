@@ -14,9 +14,10 @@ function selectOption(option){
   else { messageBoxPlaceholder.placeholder = "Hi there, I'm Kevin. I have an idea for a website...";}
 }
 
+// Drop down menu options
 function dropdownFunction() {
-  const dropdown = document.querySelector(".dropdown-content");
-  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  document.getElementsByClassName("dropdown-content")[0].classList.toggle("show-dropdown");
+  return false;
 }
 
 function submitHandler() {
@@ -58,31 +59,30 @@ function submitHandler() {
 
   // Show success screen after form submission
   setTimeout(() => {
-    const enterScreen = document.getElementById("enter-form");
-    const successScreen = document.getElementById("mail-success");
-
-    const enterScreenRect = enterScreen.getBoundingClientRect();
-
-    var screenSize = window.innerWidth;
-
-    let diff = 0
-
-    const width = window.innerWidth;
-    if (width >= 1441){
-      diff = 73;
-    }
-
-    enterScreen.style.display = 'none';
-    successScreen.style.display = 'flex';
-    successScreen.style.width = `${enterScreenRect.width - diff}px`;
-    successScreen.style.height = `${enterScreenRect.height}px`;
+    console.log("Success!");
   }, 500);
 
-  return false; // allow form to submit
+  document.getElementById("full-name").value = "";
+  document.getElementById("company-name").value = "";
+  document.getElementById("user-message").value = "";
+  return true; // allow form to submit
 }
 
 function errorMessageHandler(message){
   const errorMessage = document.getElementById("error-message");
   document.getElementById('error-message-container').style.display = 'flex';
   errorMessage.innerHTML = message;
+}
+
+window.onclick = function(event) {
+  if(!event.target.matches('.dropdown-button')){
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++){
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show-dropdown')) {
+        openDropdown.classList.remove('show-dropdown');
+      }
+    }
+  }
 }

@@ -3,15 +3,26 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Halifax's #1 solution in Website Development for Businesses, Influencers, and Logistics to increase revenue, production, and sales"/>
+	<meta name="robots" content="noindex"/>
+	<meta property="og:title" content="Front Cover Development for Websites"/>
+
+	<meta property="og:description" content="Halifax's #1 solution in Website Development for Businesses, Influencers, and Logistics to increase revenue, production, and sales" />
+
+	<link rel="icon" href="img/icon-circle.png"/>
 	<link rel="stylesheet" type="text/css" href="about-style.css">
 	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="mail.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<title>Front Cover - About Us</title>
 	<script defer type="text/javascript" src="nav.js"></script>
 	<script defer type="text/javascript" src="script.js"></script>
+	<script defer type="text/javascript" src="mail.js"></script>
 </head>
 
 <body>
@@ -65,42 +76,42 @@
 			<div id="why-choose-us-grid">
 				<div class="why-choose-us-card">
 					<img id="card-img" src="https://icons.veryicon.com/png/o/miscellaneous/cloud-keeper/client-7.png">
-					<div class="card-text">
+					<div class="why-us-card-text">
 						<p class="bold-highlight">Client First Approach</p>
 						<p class="card-paragraph">Personalizing each project to meet the specific needs and objectives of our clients. </p>
 					</div>
 				</div>
 				<div class="why-choose-us-card">
 					<img id="card-img" src="img/UserExperienceIcon.png">
-					<div class="card-text">
+					<div class="why-us-card-text">
 						<p class="bold-highlight">User Experience Focused</p>
 						<p class="card-paragraph">Attention to User Interface and Experience to ensure smooth interaction and easy navigation.</p>
 					</div>
 				</div>
 				<div class="why-choose-us-card">
 					<img id="card-img" src="img/DrivenResultsIcon.png">
-					<div class="card-text">
+					<div class="why-us-card-text">
 						<p class="bold-highlight">Driven by Results & Analytics</p>
 						<p class="card-paragraph">Focus on SEO and utilize analytics to make data-driven decisions.</p>
 					</div>
 				</div>
 				<div class="why-choose-us-card">
 					<img id="card-img" src="img/InHouseDesignIcon.png">
-					<div class="card-text">
+					<div class="why-us-card-text">
 						<p class="bold-highlight">In-House Design & Development Teams</p>
 						<p class="card-paragraph">Ensures great flexibility to reach and satisfy customer needs.</p>
 					</div>
 				</div>
 				<div class="why-choose-us-card">
 					<img id="card-img" src="img/CompMaintIcon.png">
-					<div class="card-text">
+					<div class="why-us-card-text">
 						<p class="bold-highlight">Comprehensive Maintanence Options</p>
 						<p class="card-paragraph">Updates, support, and performance audits to improve site performance.</p>
 					</div>
 				</div>
 				<div class="why-choose-us-card">
 					<img id="card-img" src="img/PrioritizeProjCommIcon.png">
-					<div class="card-text">
+					<div class="why-us-card-text">
 						<p class="bold-highlight">Prioritizing Project Communication</p>
 						<p class="card-paragraph">Providing open communication with explicit schedules and tight deadlines to enforce consistency and reliablity.</p>
 					</div>
@@ -132,28 +143,29 @@
 	</div>
 	<div id="contact">
 		<h1>Have an idea? Let's get started.</h1>
-		<div id="card-form">
+		<div id="card-form" class="hidden">
 			<div class="left-container center-container">
 				<img src="img/email.jpg">
 			</div>
 			<div class="right-container" id="mail-right-container">
-				<div id="enter-form">
+				<form id="enter-form" action="https://formspree.io/f/xdkgjpvd" method="POST">
+					<input type="hidden" name="message" id="full-message">
 					<div class="inline-form-container">
-						<p>Full Name</p>
-						<input type="text" placeholder="John Doe">
+						<p class="card-text">Full Name</p>
+						<input id="full-name" type="text" placeholder="John Doe">
 					</div>
 					<div class="inline-form-container">
-						<p>Company Name (Optional)</p>
-						<input type="text" placeholder="Company Inc">
+						<p class="card-text">Company Name (Optional)</p>
+						<input id="company-name" type="text" placeholder="Company Inc">
 					</div>
 					<div class="inline-form-container">
-						<p>Email</p>
-						<input type="text" placeholder="example@domain.com">
+						<p class="card-text">Email</p>
+						<input id="email" name="email" type="email" placeholder="example@domain.com">
 					</div>
 					<div class="inline-form-container">
-						<p>Subject</p>
+						<p class="card-text">Subject</p>
 						<div id="dropdown">
-							<button onclick="dropdownFunction()" id="dropdown-button" class="dropdown-button">
+							<button type="button" onclick="return dropdownFunction()" id="dropdown-button" class="dropdown-button">
 							    Outreach
 							    <div onclick="dropdownFunction()" class="dropdown-button"><img id="dropdown-arrow" class="dropdown-button" src="https://static.thenounproject.com/png/3012911-200.png" onclick="dropdownFunction()">
 							    </div>
@@ -170,20 +182,23 @@
 						</div>
 					</div>
 					<div class="inline-form-container">
-						<p>Message</p>
-						<textarea class="message-box" type="text" placeholder="Hi, I'm John. I have an idea for a website..."></textarea>
+						<p class="card-text">Message</p>
+						<textarea id="user-message" class="message-box" type="text" placeholder="Hi, I'm John. I have an idea for a website..."></textarea>
+					</div>
+					<div class="inline-form-container" id="error-message-container">
+						<p id="error-message">There is no error</p>
 					</div>
 					<div class="inline-form-container">
-						<p id="submit-button-alignment"> </p>
+						<p class="card-text" id="submit-button-alignment"> </p>
 						<div class="center-container">
-							<button id="submit-button" onclick="submitHandler()">Submit</button>
+							<button id="submit-button" type="submit" onclick="return submitHandler()">Submit</button>
 						</div>
 					</div>
-				</div>
+				</form>
 				<div id="mail-success">
 					<img src="img/check.webp">
 					<h2>Successfully Sent!</h2>
-					<p>You will hear from us very soon!</p>
+					<p class="card-text">You will hear from us very soon!</p>
 				</div>
 			</div>
 		</div>
