@@ -199,6 +199,10 @@
 
 /* Portfolio */
 #portfolio{
+	width: 100%;
+	overflow-x: clip;
+}
+#portfolio-animation-container{
 	margin: 124px auto;
 	display: flex;
 	flex-direction: column;
@@ -858,7 +862,7 @@
 }
 @media(max-width: 1281px){
 
-	#portfolio, #about{
+	#portfolio-animation-container, #about{
 		width: 790px;
 	}
 	#view-more h2{
@@ -1203,7 +1207,7 @@
 		display: none;
 	}
 
-	#about, #portfolio{
+	#about, #portfolio-animation-container{
 		width: 700px;
 	}
 
@@ -1375,7 +1379,7 @@
 	}
 }
 @media(max-width: 768px){
-	#portfolio{
+	#portfolio-animation-container{
 		width: 90%;
 		margin: auto;
 		margin-top: 48px;
@@ -1547,6 +1551,7 @@
 	#splash #cta button{
 		margin-bottom: 16px;
 	}
+
 	#view-more-text-container h2{
 		font-size: 36px;
 		line-height: 36px;
