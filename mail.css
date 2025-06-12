@@ -1,0 +1,291 @@
+/* Contact */
+#contact{
+	width: 100%;
+	height: auto;
+	background: linear-gradient(66deg, #FDFDFD 1%, #EDEDED 100%);
+	/*background:linear-gradient(66deg, #787df8 1%, #6aa8fc 100%);*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding-bottom: 5.5rem;
+}
+
+#card-form{
+	display: flex;
+	background-color: #FEFEFE;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 1rem;
+	height: 70%;
+	padding: 36px 32px;
+	box-shadow: 0 0 20px 4px #0000002b;
+	transition: .6s;
+}
+
+#contact h1{
+	margin-top: 4rem;
+	font-size: 3.5rem;
+	color: var(--font-colour);
+}
+
+#card-form input[type="text"], #card-form input[type="email"]{
+	width: calc(100% - 1rem); /* Adjust width to prevent overflow */
+  font-size: 1rem;
+  padding: .75rem;
+  background-color: white;
+  color: var(--font-colour);
+  border-radius: .5rem;
+  margin: .5rem;
+  border: none;
+  box-sizing: border-box; /* Ensures width includes padding */
+  border: 1px solid var(--light-blue);
+}
+
+
+
+#card-form textarea{
+	width: calc(100% - 1rem); /* Adjust width to prevent overflow */
+	height: 16rem;
+  font-size: 1rem;
+  padding: .75rem;
+  background-color: white;
+  color: var(--font-colour);
+  border-radius: .5rem;
+  margin: .5rem;
+  border: none;
+  box-sizing: border-box; /* Ensures width includes padding */
+  border: 1px solid var(--light-blue);
+  resize: none;
+}
+
+#card-form .left-container{
+	width: 50%;
+}
+
+#card-form .left-container img{
+	width: 80%;
+}
+
+#card-form .right-container{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-text{
+	font-size: 1rem;
+	padding: 0;
+	margin: .5rem 0 0 0;
+	width: 200px;
+	color: var(--font-colour);
+}
+
+#error-message-alignment{
+	margin: 0 0 .5rem 0;
+}
+
+.inline-form-container{
+	display: inline-flex;
+	flex-direction: row;
+	align-content: center;
+}
+
+#dropdown{
+	width: calc(100% - 1rem);
+	margin-left: 2px;
+}
+#dropdown-arrow{
+	width: 16px;
+	height: 20px;
+	padding-left: 16px;
+}
+
+#dropdown-button{
+	background: white;
+	border: 1px solid #DDDDDD;
+	color: var(--font-colour);
+	margin: .5rem 0 0 0 ;
+	font-size: 1rem;
+	border-radius: 8px;
+	padding: 8px 16px;
+	cursor: pointer;
+  border: 1px solid var(--light-blue);
+
+  position: relative; /* Makes the button a reference point for positioning */
+  display: flex;
+  align-items: center; /* Vertically center the content (text and arrow) */ 
+  z-index: 1;
+}
+#dropdown-button img{
+	z-index: 0;
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #F1F1F1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
+.dropdown-content a:hover{
+	color: white;
+	background-image: linear-gradient(135deg, var(--light-purple-highlight), var(--medium-purple-highlight), var(--dark-purple-highlight));
+}
+.show-dropdown{
+	display:block;
+}
+
+#submit-button{
+	background-image: linear-gradient(135deg, var(--light-purple-highlight), var(--medium-purple-highlight), var(--dark-purple-highlight), #724ae7);
+  background-size: 150% 150%; 
+	width: 8rem;
+	height: auto;
+	padding: .5rem;
+	border-radius: .5rem;
+	color: white;
+	border: none;
+	margin-top: .5rem;
+	transition: 0.25s ease;
+	font-size: 1rem;
+}
+
+#card-form .right-container .inline-form-container .center-container{
+	width: 100%;
+}
+
+#enter-form{
+	 display: flex;
+	 flex-direction: column;
+}
+
+#submit-button:hover{
+	cursor: pointer;
+  background-position: 100% 100%;
+  background-size: 150% 150%;
+}
+
+#mail-success{
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#mail-success img{
+	width: 96px;
+}
+#mail-success h2{
+	margin-bottom: 8px;
+}
+#mail-success p{
+	text-align: center;
+	margin-top: 8px;
+	line-height: 18px;
+}
+
+#error-message-container{
+ 	width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#error-message{
+	display: block;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+  background-color: #FFDDDD;
+  color: #F90000;
+  border-radius: 8px;
+  margin: 0 8px 0 0;
+  padding: 4px 8px;
+  width: 70%;
+}
+
+@media(max-width: 1281px){
+	#card-form{
+		width: calc(85% - 72px);
+	}
+}
+
+@media(max-width: 1025px){
+	#contact h1{
+		font-size: 2.5rem;
+	}
+
+	#contact .left-container{
+		width: 45%;
+	}
+	#contact .right-container{
+		width: 55%;
+	}
+	#contact .left-container img{
+		width: 92%;
+	}
+
+	#contact .card-text{
+		font-size: 14px;
+		padding: 0;
+		margin: 1rem 0 0 0;
+		width: 160px;
+	}
+	#contact .right-container input{
+		margin-bottom: 0;
+	}
+	#error-message{
+		margin: 0 12px 0 0;
+	}
+}
+
+@media(max-width: 875px){
+	
+	#error-message{
+		margin: 0;
+	}
+}
+@media(max-width: 495px){
+	#contact h1{
+		font-size: 1.75rem;
+		text-align: center;
+	}
+	#card-form{
+		flex-direction: column;
+	}
+	#card-form .left-container, #card-form .right-container{
+		width: 100%;
+	}
+	#card-form .left-container img{
+		width: 172px;
+	}
+	#card-form .card-text{
+		width: calc(90% - 72px);
+		margin-left: 8px;
+	}
+	#card-form .right-container input{
+		margin: 4px 8px;
+	}
+	#dropdown-button{
+		margin-left: 8px;
+	}
+	#card-form .right-container .inline-form-container{
+		flex-direction: column;
+	}
+
+	#error-message{
+		width: 100%;
+	}
+	#submit-button-alignment{
+		display: none;
+	}
+}
